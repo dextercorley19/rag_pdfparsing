@@ -8,6 +8,8 @@ COPY . /app
 
 # Install any dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+# Download the 'punkt' tokenizer data
+RUN python -c "import nltk; nltk.download('punkt')"
 
 # Run the Python application
 CMD ["python", "main.py"]
