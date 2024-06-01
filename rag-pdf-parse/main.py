@@ -7,7 +7,7 @@ from openai import OpenAI
 import os
 
 output_string = StringIO()
-with open('/Users/dcmac14/Documents/2024-Q2_Projects/rag_pdfparsing/rag-pdf-parse/PenaltyBoxIII-OperatingManual.pdf', 'rb') as fin:
+with open('/app/PenaltyBoxIII-OperatingManual.pdf', 'rb') as fin:
     extract_text_to_fp(fin, output_string, laparams=LAParams(),
                        output_type='text', codec=None) #can be 'html', 'xml', 'text', 'tag'
     
